@@ -10,7 +10,6 @@ class App extends Component {
       console.log(res)
     });
   }
-  stuffkdhfdkhf
 
   render() {
     return (
