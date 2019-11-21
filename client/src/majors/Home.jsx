@@ -45,6 +45,10 @@ class Home extends Component {
                         <button type="submit">Submit</button>
                     </form>
                 </div>
+                <div>
+                    <h3>Or, stop being a dork and sign up</h3>
+                    <a href='/signup'>Create Account</a>
+                </div>
             </div>
          );
     }
