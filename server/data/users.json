@@ -1,0 +1,19 @@
+{
+    "users" : [
+        {
+            "email": "bob@gmail.com",
+            "pass": "test",
+            "guid": "1234"
+        },
+        {
+            "email": "q@q.com",
+            "pass": "q",
+            "guid": "5678"
+        },
+        {
+            "email": "w@w.com",
+            "pass": "w",
+            "guid": "9101"
+        }
+    ]
+}
