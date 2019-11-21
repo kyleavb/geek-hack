@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
-import Home from './Home'
-import Feed from './Feed'
-import EventList from './EventList'
-import SignUp from './SignUp'
+import Home from './majors/Home'
+import Feed from './majors/Feed'
+import EventList from './majors/EventList'
+import SignUp from './majors/SignUp'
 import axios from 'axios';
 import './App.css';
 
@@ -14,7 +14,6 @@ class App extends Component {
       console.log(res)
     });
   }
-  stuffkdhfdkhf
 
   render() {
     return (
