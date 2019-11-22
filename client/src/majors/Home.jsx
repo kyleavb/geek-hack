@@ -9,6 +9,13 @@ class Home extends Component {
         fail: false
     }
 
+    componentDidMount(){
+        if(ls.get( 'user' )){
+            ls.remove('user');
+            this.setState( {fail: false});
+        }
+    }
+
     handleChange = (e) => {
         this.setState( {[e.target.name]: e.target.value })
     }
