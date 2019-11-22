@@ -4,7 +4,9 @@ const path = require( 'path' );
 const bodyParser = require('body-parser');
 const config = require('./config');
 const routes = require('./routes');
+
 const users = require('./data/users.json')
+const feed = require('./data/feedData.json')
 // Serve the static files from the React app
 // app.use(express.static(path.resolve(__dirname, '/data')));
 // app.use(express.static(path.join( __dirname, '../', 'client', 'build')));
@@ -21,6 +23,17 @@ app.post( '/auth', ( req, res ) => {
         }
     }
     res.send( sendback );
+})
+
+app.post( '/feed', ( req, res ) => {
+    let user = parseInt(req.body.login);
+    let events = null;
+    for(let item of feed.data ){
+        if( parseInt(item.id) === user ){
+            events = item.events;
+        }
+    }
+    res.send( events );
 })
 
 app.get('/data', ( req, res ) => {

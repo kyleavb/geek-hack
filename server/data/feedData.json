@@ -1,0 +1,53 @@
+{
+    "data":[
+        {
+            "id": "1234",
+            "events": []
+        },
+        {
+            "id": "5678",
+            "events": [
+                {
+                    "title": "My Event 1",
+                    "date" : "Nov. 22nd 2019",
+                    "loc": "123 Main St. Seattle, WA 98101",
+                    "attendies": 5
+                },
+                {
+                    "title": "My Event 2",
+                    "date" : "Nov. 22nd 2019",
+                    "loc": "123 Main St. Seattle, WA 98101",
+                    "attendies": 5
+                },
+                {
+                    "title": "My Event 3",
+                    "date" : "Nov. 22nd 2019",
+                    "loc": "123 Main St. Seattle, WA 98101",
+                    "attendies": 5
+                },
+                {
+                    "title": "My Event 4",
+                    "date" : "Nov. 22nd 2019",
+                    "loc": "123 Main St. Seattle, WA 98101",
+                    "attendies": 5
+                },
+                {
+                    "title": "My Event 5",
+                    "date" : "Nov. 22nd 2019",
+                    "loc": "123 Main St. Seattle, WA 98101",
+                    "attendies": 5
+                },
+                {
+                    "title": "My Event 6",
+                    "date" : "Nov. 22nd 2019",
+                    "loc": "123 Main St. Seattle, WA 98101",
+                    "attendies": 5
+                }
+            ]
+        },
+        {
+            "id": "9101",
+            "events": []
+        }
+    ]
+}
