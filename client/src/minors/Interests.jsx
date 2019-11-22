@@ -8,7 +8,7 @@ class Interests extends Component {
     }
     render() { 
         return ( 
-                <div className='signUpRow'>
+                <div className='signUpRow whiteBackground'>
                     <img src={this.props.category.img} />
                     <div>
                     <h1>{this.props.category.title}</h1>

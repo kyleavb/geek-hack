@@ -29,14 +29,20 @@ class App extends Component {
     } else{
       contentClass=''
     }
+    var background;
+    if(this.state.user){
+      background = 'app'
+    }else{
+      background = 'app background'
+    }
     return (
-      <div className="app">
+      <div className={background}>
         <Header user={ this.state.user }/>
         <Router>
           <div className={contentClass}>
             <Switch>
               <Route exact path='/' render={ (props) => <Home {...props} login={this.login} /> } />
-              <Route exact path='/signup' component={SignUp} />
+              <Route exact path='/signup' render={ (props) => <SignUp {...props} login={this.login} /> } />
               <Route exact path='/:guid' render={ (props) => <Feed {...props} user={this.state.user} /> }/>
               <Route exact path='/:guid/events' render={ (props) => <EventList {...props} user={this.state.user} /> }/>
               <Route exact path='/:guid/event/:eguid' render={ (props) => <Event {...props} user={this.state.user} /> }/>

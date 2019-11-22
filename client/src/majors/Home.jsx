@@ -39,25 +39,29 @@ class Home extends Component {
     }
 
     render() {
-        
         return ( 
             <div>
-                <h1>Geek related Social App</h1>
-                <div>
+                <div className='logoContainer'>
+                <img className='logo' height='100' width='100' src='https://i.imgur.com/Il1df01.jpg' />
+                </div>
+                <h1 className='App white'>G33K OUT</h1>
+                <div className='loginContent whiteBackground'>
                     <div className={ this.state.fail ? 'fail' : 'hide' }>Login attempt Failed</div>
-                    <form id="login" onSubmit={ this.handleSubmit }>
-                        <label>Login: 
+                    <form className='loginForm' onSubmit={ this.handleSubmit }>
+                        <label><span>Login:</span> 
                             <input type="text" name="login" placeholder="E-mail" value={ this.state.login } onChange={ this.handleChange }></input>
                         </label>
-                        <label>Password:
+                        <br />
+                        <label><span className=''>Password:</span> 
                             <input type="password" name="pass" placeholder="Password" data='pass' value={ this.state.pass } onChange={ this.handleChange }></input>
                         </label>
-                        <button type="submit">Submit</button>
+                        <br />
+                        <button className='signUpButton' type="submit">Submit</button>
                     </form>
-                </div>
                 <div>
-                    <h3>Or, stop being a dork and sign up</h3>
-                    <a href='/signup'>Create Account</a>
+                    <h2 className='App'>Or, stop being a dork and sign up</h2>
+                    <h3><a className="signUpLink" href='/signup'>Create Account</a></h3>
+                </div>
                 </div>
             </div>
          );
