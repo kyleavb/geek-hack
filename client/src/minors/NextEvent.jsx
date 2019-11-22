@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import UserIcons from './UserIcons';
 class NextEvent extends Component {
     render(){
         return(
@@ -9,6 +9,7 @@ class NextEvent extends Component {
                 <p className="tilDate">{this.props.event.date}</p>
                 <h3>{this.props.event.title}</h3>
                 <p>{this.props.event.loc}</p>
+                <UserIcons count={ this.props.event.attendies } arrow={false}/>
             </div>
         )
     }

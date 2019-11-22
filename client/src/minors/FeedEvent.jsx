@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import UserIcons from './UserIcons';
 class FeedEvent extends Component {
     state = {
         eventInfo : null
@@ -11,6 +11,7 @@ class FeedEvent extends Component {
         }
     }
     render(){
+        let attendies = <UserIcons count={ this.props.event.attendies } arrow={true} />
         return(
             <a href={`/${this.props.user}/event/${this.props.event.id}`}>
                 <div className="reg-event-item">
@@ -19,8 +20,9 @@ class FeedEvent extends Component {
                     </div>
                     <div>
                         <p className="tilDate">{this.props.event.date}</p>
-                        <h3>{this.props.event.title}</h3>
+                        <h4>{this.props.event.title}</h4>
                         <p>{this.props.event.loc}</p>
+                        {/* {attendies} */}
                     </div>
                 </div>
             </a>

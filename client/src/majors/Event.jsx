@@ -17,7 +17,7 @@ class Event extends Component {
 
     checkState = () => {
         if(this.state.event){
-            let attendies = <UserIcons count={ this.state.event.attendies }/>
+            let attendies = <UserIcons count={ this.state.event.attendies } arrow={true} />
             return (
                 <div className="event">
                     <div className="event-map"></div>

@@ -12,13 +12,13 @@ class UserIcons extends Component {
             let random = Math.floor(Math.random() * 3);  
             mapIcons.push(<img key={i} src={picList[random]}></img>)
         }
-
+        let arrow = this.props.arrow ? <img src="https://img.icons8.com/android/24/000000/chevron-right.png"></img> : '';
         return(
             <div className="attendBar">
                 <div id="stuff"className="weirdIcons">
                     {mapIcons}
                 </div>
-                <img src="https://img.icons8.com/android/24/000000/chevron-right.png"></img>
+                
             </div>
         )
     }

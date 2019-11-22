@@ -8,8 +8,8 @@ const routes = require('./routes');
 const users = require('./data/users.json')
 const feed = require('./data/feedData.json')
 // Serve the static files from the React app
-// app.use(express.static(path.resolve(__dirname, '/data')));
-// app.use(express.static(path.join( __dirname, '../', 'client', 'build')));
+app.use(express.static(path.resolve(__dirname, '/data')));
+app.use(express.static(path.join( __dirname, '../', 'client', 'build')));
 app.use(bodyParser.json())
 
 app.post( '/auth', ( req, res ) => {
@@ -61,7 +61,13 @@ app.post( '/event', ( req, res ) => {
         }
     }
     res.send( ret );
-})
+});
+
+app.get('/', ( req, res ) => {
+    
+    res.sendFile(path.join(__dirname, '../', 'client', 'build', 'index.html'))
+});
+
 app.all( '/*', routes );
 // common 404
 app.use( (req, res) => res.status( 404 ).send('Shit Broke, Not Found') );

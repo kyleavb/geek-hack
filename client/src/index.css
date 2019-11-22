@@ -15,6 +15,7 @@ html{
 .button a, .button label{
   text-decoration: none;
   cursor: pointer;
+  margin: 0 10px;
 }
 #login{
   max-width: 200px;
@@ -29,10 +30,6 @@ label{
   display: block;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
 
 .signUpContainer  {
   width: 100%;
@@ -71,7 +68,7 @@ code {
   color: white;
 }
 .profile{
-  width: 33%;
+  /* width: 33%; */
 }
 .app{
   height: 100vh;
@@ -247,8 +244,7 @@ code {
   font-size: 3em;
 }
 .content{
-  margin-top: 5em;
-  margin-bottom: 5em;
+  margin: 5em 5%;
 }
 .hide{
   display: none;
@@ -294,6 +290,15 @@ code {
 .reg-event-item{
   display: flex;
   align-items: center;
+  margin: 15px 0;
+}
+
+.reg-event-item p{
+  font-size: .9em;
+}
+
+.reg-event-item p, .reg-event-item h4{
+  margin: 5px;
 }
 
 .reg-event-item img{
@@ -301,8 +306,8 @@ code {
   border-radius: 5%;
 }
 
-.event{
-
+.event-item h3, .event-item p{
+  margin: 5px 0;
 }
 
 .event-detail{
