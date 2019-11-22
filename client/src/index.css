@@ -16,6 +16,9 @@ body {
   border: 1px black solid;
 }
 
+.tilNext strong{
+  color: red;
+}
 label{
   display: block;
 }
@@ -69,7 +72,7 @@ code {
   z-index: 100;
   position: fixed;
   width: 100%;
-  background: plum;
+  background: white;
   height: 5em;
   left: 0px;
   overflow:hidden;
@@ -81,6 +84,7 @@ code {
 }
 
 .footer{
+  background: lightgray;
   bottom: 0px;
   justify-content: space-around;
   align-items: center;
@@ -109,6 +113,7 @@ code {
   border: 2px solid black;
   display: grid;
   grid-template-columns: 1fr 2fr;
+
   margin: 5%;
 }
 
@@ -149,3 +154,44 @@ code {
   top: 0;
   width: 100%
 }
+
+.reg-event-item{
+  display: flex;
+  align-items: center;
+}
+
+.reg-event-item img{
+  margin-right: 1em;
+  border-radius: 5%;
+}
+
+.event{
+
+}
+
+.event-detail{
+
+}
+
+.event-map{
+  height: calc(100vh - 10em);
+  background: url("https://northstar-pres.com/wp-content/uploads/2015/10/google-map-placeholder.png");
+  background-size: cover;
+  margin-bottom: 1em;
+}
+
+.rsvp{
+  display: flex;
+  align-content: space-around;
+  justify-content: space-around;
+}
+.rsvp select{
+  min-width: 30%;
+}
+
+.rsvp-img{
+  display: flex;
+  justify-content: space-between;
+  width: 20%;
+}
+

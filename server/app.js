@@ -41,7 +41,24 @@ app.get('/data', ( req, res ) => {
     res.sendStatus(200);
 });
 
+app.post( '/event', ( req, res ) => {
+    let user = req.body.login;
+    let eventId = req.body.event;
+    let temp;
+    let ret;
+    for(let item of feed.data){
+        if(item.id == user){
+            temp = item.events;
+        }
+    }
 
+    for(let item of temp){
+        if(item.id == eventId){
+            ret = item;
+        }
+    }
+    res.send( ret );
+})
 app.all( '/*', routes );
 // common 404
 app.use( (req, res) => res.status( 404 ).send('Shit Broke, Not Found') );
