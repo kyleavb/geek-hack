@@ -6,6 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 #login{
   max-width: 200px;
   border: 1px black solid;
@@ -28,3 +29,32 @@ code {
   display: block;
   background: red;
   color: white;
+}
+
+.signUpContainer {
+  width: 50%;
+  height:100vh;
+  overflow-y: scroll;
+  margin: 0 auto;
+}
+
+.signUpRow {
+  height: 200px;
+  position: relative;
+  border: 2px solid black;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+
+}
+
+.signUpRow img{
+  height: 200px;
+  width:225px
+}
+
+.signUpRowClick{
+  position: absolute;
+  bottom: 0;
+  right: 5px;
+  font-size: 5em;
+}
