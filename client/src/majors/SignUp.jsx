@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Add from '../Add'
 
 class SignUp extends Component {
     state = { 
@@ -63,9 +64,32 @@ class SignUp extends Component {
         } else {
             var content = (
                 <div>
-                    <div>
-                        <h1>Dungeons and Dragons</h1>
+                <h1 className='App'>Choose your Favorites!</h1>
+                <div className='signUpContainer'>
+                    <div className='signUpRow'>
+                        <img src='http://media.wizards.com/2018/dnd/images/XL2018_DnD.png' />
+                        <div>
+                        <h1>Table Top Games</h1>
+                        <h3>Games like D&D, Warhammer, Pathfinder, etc...</h3>
+                        <Add />
+                        </div>
                     </div> 
+                    <div className='signUpRow'>
+                        <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Star_Wars_Logo.svg/1200px-Star_Wars_Logo.svg.png' />
+                        <h1>Star Wars</h1>
+                        <Add />
+                    </div> 
+                    <div className='signUpRow'>
+                        <Add />
+                    </div> 
+                    <div className='signUpRow'>
+                        <Add />
+                    </div> 
+                    <div className='signUpRow'>
+                        <h1>Dungeons and Dragons</h1>
+                        <Add />
+                    </div> 
+                </div>
                 </div>
             )
         }
