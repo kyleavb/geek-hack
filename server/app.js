@@ -64,7 +64,7 @@ app.post( '/event', ( req, res ) => {
 });
 
 app.get('/', ( req, res ) => {
-    
+    res.sendStatus(200)
     res.sendFile(path.join(__dirname, '../', 'client', 'build', 'index.html'))
 });
 
