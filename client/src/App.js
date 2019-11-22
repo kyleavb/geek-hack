@@ -6,34 +6,38 @@ import EventList from './majors/EventList'
 import SignUp from './majors/SignUp'
 import Header from './majors/Header'
 import Footer from './majors/Footer'
+import ls from 'local-storage'
 import './App.css';
 
 class App extends Component {
   state = {
-    user: true
+    user: ls.get( 'user' ) || null
   }
 
   login = (guid) => {
     if( guid ){
       this.setState({user: guid})
+      ls.set('user', guid);
     } 
   }
 
   render() {
-    console.log( this.state.user)
+    
     return (
-      <Router>
+      <div className="app">
         <Header user={ this.state.user }/>
-        <div className="content">
-          <Switch>
-            <Route exact path='/' render={ (props) => <Home {...props} login={this.login} /> } />
-            <Route exact path='/signup' component={SignUp} />
-            <Route exact path='/:guid' component={Feed} />
-            <Route exact path='/:guid/events' component={EventList} />
-          </Switch>
-        </div>
+        <Router>
+          <div className="content">
+            <Switch>
+              <Route exact path='/' render={ (props) => <Home {...props} login={this.login} /> } />
+              <Route exact path='/signup' component={SignUp} />
+              <Route exact path='/:guid' render={ (props) => <Feed {...props} user={this.state.user} /> }/>
+              <Route exact path='/:guid/events' render={ (props) => <EventList {...props} user={this.state.user} /> }/>
+            </Switch>
+          </div>
+        </Router>
         <Footer user={ this.state.user } />
-      </Router>
+      </div>
     );
   }
 }

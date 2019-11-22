@@ -6,7 +6,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+.button a, .button label{
+  text-decoration: none;
+  cursor: pointer;
+}
 #login{
   max-width: 200px;
   padding: 1em;
@@ -22,41 +25,49 @@ code {
     monospace;
 }
 
-.hide{
-  display: none;
+.center{
+  text-align: center;
 }
-
 .fail{
   display: block;
   background: red;
   color: white;
 }
-
+.profile{
+  width: 33%;
+}
 .header, .footer{
-  position: absolute;
+  display: flex;
+  z-index: 100;
+  position: fixed;
   width: 100%;
-  display: fixed;
   background: plum;
-  height: 5%;
-  left: 0;
+  height: 5em;
+  left: 0px;
   overflow:hidden;
 }
 .header{
   top: 0px;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 .footer{
   bottom: 0px;
+  justify-content: space-around;
+  align-items: center;
 }
-.content{
-  margin: 2em;
-  overflow: auto;
-  position: absolute;
+
+.useBar{
+  display: flex;
+  justify-content: space-evenly;
+  width: 66%;
 }
 
 .filler{
   height: 40vh;
 }
+
 .signUpContainer {
   width: 50%;
   height:100vh;
@@ -83,4 +94,10 @@ code {
   bottom: 0;
   right: 5px;
   font-size: 5em;
+}
+.content{
+  margin-top: 5em;
+}
+.hide{
+  display: none;
 }
