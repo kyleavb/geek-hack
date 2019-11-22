@@ -15,7 +15,7 @@ class FeedEvent extends Component {
             <a href={`/${this.props.user}/event/${this.props.event.id}`}>
                 <div className="reg-event-item">
                     <div>
-                        <img src="https://via.placeholder.com/150x100"></img>
+                        <img src="https://placeimg.com/150/100/people"></img>
                     </div>
                     <div>
                         <p className="tilDate">{this.props.event.date}</p>
