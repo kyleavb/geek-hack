@@ -33,6 +33,9 @@ app.post( '/feed', ( req, res ) => {
             events = item.events;
         }
     }
+    if( events.length < 1){
+        events = null;
+    }
     res.send( events );
 })
 

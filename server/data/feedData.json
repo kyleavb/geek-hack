@@ -18,6 +18,9 @@
                     "desc": "",
                     "freq": "",
                     "host": "",
+                    "repeat": "",
+                    "time": "",
+                    "address": "",
                     "chat": [
                         {
                             "user": 1,
@@ -37,11 +40,14 @@
                     "title": "Emerald City LARPers",
                     "date" : "MONDAY, NOV 23",
                     "loc": "Volunteer Park, Seattle",
-                    "attendies": 3,
+                    "attendies": 30,
                     "id": "djkahri74uy4u",
                     "desc": "Meet other local people interested in the super COOL world of live action Role Playing.  The theater-style live role-playing with SIMULATED (for real this time randy) combat and intricate plots.",
                     "freq": "Weekly Meetup",
                     "host": "Steve Peters",
+                    "repeat": "Every Sunday",
+                    "time": "1pm - 4pm",
+                    "address": "1247 15th Ave E. Seattle, WA 98112",
                     "chat": []
                 },
                 {
@@ -53,6 +59,9 @@
                     "desc": "",
                     "freq": "",
                     "host": "",
+                    "repeat": "",
+                    "time": "",
+                    "address": "",
                     "chat": []
                 },
                 {
@@ -64,6 +73,9 @@
                     "desc": "",
                     "freq": "",
                     "host": "",
+                    "repeat": "",
+                    "time": "",
+                    "address": "",
                     "chat": []
                 },
                 {
@@ -75,6 +87,9 @@
                     "desc": "",
                     "freq": "",
                     "host": "",
+                    "repeat": "",
+                    "time": "",
+                    "address": "",
                     "chat": []
                 },
                 {
@@ -86,6 +101,9 @@
                     "desc": "",
                     "freq": "",
                     "host": "",
+                    "repeat": "",
+                    "time": "",
+                    "address": "",
                     "chat": []
                 }
             ]
