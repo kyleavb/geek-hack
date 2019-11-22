@@ -29,7 +29,7 @@ class SignUp extends Component {
         var content;
         if(this.state.displayInfo){
             var content = (
-                <div className=''>
+                <div className='signupForm'>
                     <h1 className='App'>Basic Info</h1>
                     <form>
                         My Name Is:
