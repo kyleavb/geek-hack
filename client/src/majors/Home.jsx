@@ -19,6 +19,7 @@ class Home extends Component {
             pass: this.state.pass   
         }).then( res => {
             if( res.data ){
+                this.props.login(res.data)
                 this.props.history.push(`/${res.data}`)
             }else{
                 this.setState( {fail: true} )

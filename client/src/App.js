@@ -4,26 +4,35 @@ import Home from './majors/Home'
 import Feed from './majors/Feed'
 import EventList from './majors/EventList'
 import SignUp from './majors/SignUp'
-import axios from 'axios';
+import Header from './majors/Header'
+import Footer from './majors/Footer'
 import './App.css';
 
 class App extends Component {
+  state = {
+    user: true
+  }
 
-  componentDidMount() {
-    axios.get('/data').then( (res) => {
-      console.log(res)
-    });
+  login = (guid) => {
+    if( guid ){
+      this.setState({user: guid})
+    } 
   }
 
   render() {
+    console.log( this.state.user)
     return (
       <Router>
-        <Switch>
-          <Route exact path='/' component={Home} />
-          <Route exact path='/signup' component={SignUp} />
-          <Route exact path='/:guid' component={Feed} />
-          <Route exact path='/:guid/events' component={EventList} />
-        </Switch>
+        <Header user={ this.state.user }/>
+        <div className="content">
+          <Switch>
+            <Route exact path='/' render={ (props) => <Home {...props} login={this.login} /> } />
+            <Route exact path='/signup' component={SignUp} />
+            <Route exact path='/:guid' component={Feed} />
+            <Route exact path='/:guid/events' component={EventList} />
+          </Switch>
+        </div>
+        <Footer user={ this.state.user } />
       </Router>
     );
   }

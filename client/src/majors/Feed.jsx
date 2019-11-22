@@ -7,7 +7,30 @@ class Feed extends Component {
     }
     render() { 
         return ( 
-            <p> This is the Feed Route </p>
+            <div>
+                <div className="filler">
+                    <p> This is the Feed Route </p>
+                </div>
+                <div className="filler">
+                    <p> This is the Feed Route </p>
+                </div>
+                <div className="filler">
+                    <p> This is the Feed Route </p>
+                </div>
+                <div className="filler">
+                    <p> This is the Feed Route </p>
+                </div>
+                <div className="filler">
+                    <p> This is the Feed Route </p>
+                </div>
+                <div className="filler">
+                    <p> This is the Feed Route </p>
+                </div>
+                <div className="filler">
+                    <p> This is the Feed Route </p>
+                </div>
+            </div>
+            
          );
     }
 }

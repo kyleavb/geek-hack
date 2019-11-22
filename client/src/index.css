@@ -1,5 +1,5 @@
 body {
-  margin: 0;
+  margin: 0 10%;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -8,6 +8,7 @@ body {
 }
 #login{
   max-width: 200px;
+  padding: 1em;
   border: 1px black solid;
 }
 
@@ -28,3 +29,30 @@ code {
   display: block;
   background: red;
   color: white;
+}
+
+.header, .footer{
+  position: absolute;
+  width: 100%;
+  display: fixed;
+  background: plum;
+  height: 5%;
+  left: 0;
+  overflow:hidden;
+}
+.header{
+  top: 0px;
+}
+
+.footer{
+  bottom: 0px;
+}
+.content{
+  margin: 2em;
+  overflow: auto;
+  position: absolute;
+}
+
+.filler{
+  height: 40vh;
+}
