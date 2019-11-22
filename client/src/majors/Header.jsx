@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import persona from '../assets/persona.svg'
 
 class Header extends Component {
     
@@ -7,7 +8,9 @@ class Header extends Component {
             <div className={ `header ${this.props.user? '' : 'hide'}` }>
                 <div className="profile center button" >
                     <a href={`/profile/${this.props.user}`}>
-                        <img src="https://img.icons8.com/ios/24/000000/user.png"></img>
+                        <svg width="40" height="40">       
+                            <image href={persona} width="40" height="40"/>    
+                        </svg>
                     </a>
                 </div>
                 <div className="useBar">

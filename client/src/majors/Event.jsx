@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import UserIcons from '../minors/UserIcons';
 import axios from 'axios';
 
 class Event extends Component {
@@ -16,6 +17,7 @@ class Event extends Component {
 
     checkState = () => {
         if(this.state.event){
+            let attendies = <UserIcons count={ this.state.event.attendies }/>
             return (
                 <div className="event">
                     <div className="event-map"></div>
@@ -40,7 +42,32 @@ class Event extends Component {
                             <div className="rsvp-img">
                                 <img src="https://img.icons8.com/metro/24/000000/star.png"></img>
                                 <img src="https://img.icons8.com/ios/24/000000/more.png"></img>
-
+                            </div>
+                        </div>
+                        <div className="specific-details">
+                            <div className="specifics">
+                                <img src="https://img.icons8.com/android/24/000000/clock.png"></img>
+                                <div>
+                                    <h4>{this.state.event.repeat}</h4>
+                                    <p>{this.state.event.time}</p>
+                                </div>
+                            </div>
+                            <div className="specifics">
+                                <img src="https://img.icons8.com/ios/24/000000/marker.png"></img>
+                                <div>
+                                    <h4>{this.state.event.loc}</h4>
+                                    <p>{this.state.event.address}</p>
+                                </div>
+                            </div>
+                            <div className="specifics">
+                                <img src="https://img.icons8.com/ios/24/000000/lol.png"></img>
+                                <div>
+                                    <h4>{this.state.event.host}</h4>
+                                </div>
+                            </div>
+                            <div>
+                                <h4>{`${this.state.event.attendies} people are going`}</h4>
+                                {attendies}
                             </div>
                         </div>
                     </div>
