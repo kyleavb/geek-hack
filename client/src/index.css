@@ -16,6 +16,9 @@ body {
   border: 1px black solid;
 }
 
+.tilNext strong{
+  color: red;
+}
 label{
   display: block;
 }
@@ -41,7 +44,7 @@ code {
   z-index: 100;
   position: fixed;
   width: 100%;
-  background: plum;
+  background: white;
   height: 5em;
   left: 0px;
   overflow:hidden;
@@ -81,7 +84,6 @@ code {
   border: 2px solid black;
   display: grid;
   grid-template-columns: 1fr 2fr;
-
 }
 
 .signUpRow img{
@@ -101,4 +103,14 @@ code {
 }
 .hide{
   display: none;
+}
+
+.reg-event-item{
+  display: flex;
+  align-items: center;
+}
+
+.reg-event-item img{
+  margin-right: 1em;
+  border-radius: 5%;
 }
