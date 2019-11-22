@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import FeedEvent from '../minors/FeedEvent'
+import FeedEvent from '../minors/FeedEvent';
+import NextEvent from '../minors/NextEvent';
 import axios from 'axios';
 
 class Feed extends Component {
@@ -7,7 +8,6 @@ class Feed extends Component {
         events: ''
     };
     componentDidMount(){
-        console.log()
         axios.post( '/feed', {
             login: this.props.user,
         }).then( res => {
@@ -18,15 +18,20 @@ class Feed extends Component {
     }
 
     mapEvents = () => {
-        return this.state.events.map( (item, i) => (
-            <FeedEvent event={item} key={i} />
-        ))
+        return this.state.events.map( (item, i) => {
+            if( i === 0){
+                return <NextEvent user={this.props.user} event={item} key={i}/>
+            }else{
+                return <FeedEvent user={this.props.user} event={item} key={i} />
+            }
+        })
     }
 
     render() {
         let mappedEvents = this.state.events ? this.mapEvents() : 'You Lonley!'
         return ( 
             <div className="feed">
+                <h3>Following</h3>
                 {mappedEvents}
             </div>
          );

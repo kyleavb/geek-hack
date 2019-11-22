@@ -8,40 +8,85 @@
             "id": "5678",
             "events": [
                 {
-                    "title": "My Event 1",
-                    "date" : "Nov. 22nd 2019",
-                    "loc": "123 Main St. Seattle, WA 98101",
-                    "attendies": 5
+                    "till" : "2 days",
+                    "title": "Seattle D&D Meetup",
+                    "date" : "SUNDAY, 7PM",
+                    "loc": "General Assembly Seattle",
+                    "attendies": 3,
+                    "map" : "",
+                    "id": "33587f8r6e8",
+                    "desc": "",
+                    "freq": "",
+                    "host": "",
+                    "chat": [
+                        {
+                            "user": 1,
+                            "message" : "Looking forward to it!"
+                        },
+                        {
+                            "user": 4,
+                            "message" : "I put on my wizard hat and cape"
+                        },
+                        {
+                            "user": 5,
+                            "message" : "Can I be a Jedi?"
+                        }
+                    ]
                 },
                 {
-                    "title": "My Event 2",
-                    "date" : "Nov. 22nd 2019",
-                    "loc": "123 Main St. Seattle, WA 98101",
-                    "attendies": 5
+                    "title": "Emerald City LARPers",
+                    "date" : "MONDAY, NOV 23",
+                    "loc": "Volunteer Park, Seattle",
+                    "attendies": 3,
+                    "id": "djkahri74uy4u",
+                    "desc": "Meet other local people interested in the super COOL world of live action Role Playing.  The theater-style live role-playing with SIMULATED (for real this time randy) combat and intricate plots.",
+                    "freq": "Weekly Meetup",
+                    "host": "Steve Peters",
+                    "chat": []
                 },
                 {
                     "title": "My Event 3",
-                    "date" : "Nov. 22nd 2019",
+                    "date" : "MONDAY, NOV 23",
                     "loc": "123 Main St. Seattle, WA 98101",
-                    "attendies": 5
+                    "attendies": 5,
+                    "id": "i74kjh832",
+                    "desc": "",
+                    "freq": "",
+                    "host": "",
+                    "chat": []
                 },
                 {
                     "title": "My Event 4",
-                    "date" : "Nov. 22nd 2019",
+                    "date" : "MONDAY, NOV 23",
                     "loc": "123 Main St. Seattle, WA 98101",
-                    "attendies": 5
+                    "attendies": 5,
+                    "id": "8734uhe3e",
+                    "desc": "",
+                    "freq": "",
+                    "host": "",
+                    "chat": []
                 },
                 {
                     "title": "My Event 5",
-                    "date" : "Nov. 22nd 2019",
+                    "date" : "MONDAY, NOV 23",
                     "loc": "123 Main St. Seattle, WA 98101",
-                    "attendies": 5
+                    "attendies": 5,
+                    "id": "864983y4h4",
+                    "desc": "",
+                    "freq": "",
+                    "host": "",
+                    "chat": []
                 },
                 {
                     "title": "My Event 6",
-                    "date" : "Nov. 22nd 2019",
+                    "date" : "MONDAY, NOV 23",
                     "loc": "123 Main St. Seattle, WA 98101",
-                    "attendies": 5
+                    "attendies": 5,
+                    "id": "28397yu4kjg35",
+                    "desc": "",
+                    "freq": "",
+                    "host": "",
+                    "chat": []
                 }
             ]
         },
