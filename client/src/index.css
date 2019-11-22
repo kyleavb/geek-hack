@@ -1,11 +1,17 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: roboto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+html{
+  margin: 0
+}
+
+.white{
+  color:white;
+}
+
 .button a, .button label{
   text-decoration: none;
   cursor: pointer;
@@ -67,6 +73,9 @@ code {
 .profile{
   width: 33%;
 }
+.app{
+  height: 100vh;
+}
 .header, .footer{
   display: flex;
   z-index: 100;
@@ -107,21 +116,120 @@ code {
   margin: 0 auto;
 } */
 
+.loginForm{
+  margin-top: 3em;
+}
+
+.loginContent{
+  height: 60vh;
+  margin: 3em 1em 3em 1em;
+  border: 1px solid black;
+  border-radius: 5%;
+}
+
+.loginContent form{
+  margin-left: 5%;
+}
+
+.loginContent p{
+  margin: 2px 0px;
+}
+
+.loginContent input{
+  width: 95%;
+  font-size: 2em;
+  border: 2px solid rgba(0, 0, 0, 0.692);
+  border-radius: 15px;
+  margin: 2px 0px;
+}
+
 .signUpRow {
   height: 150px;
   position: relative;
   border: 2px solid black;
   display: grid;
   grid-template-columns: 1fr 2fr;
-<<<<<<< HEAD
-<<<<<<< HEAD
   margin: 5%;
-=======
->>>>>>> 6fd027f742ca9018f0835926f93f8a4b932752ea
-=======
+}
 
-  margin: 5%;
->>>>>>> 5afebdcaf63a50df6bf802e91be31fcaab37af36
+.signUpForm{
+  height: 80vh;
+  margin: 3em 1em 3em 1em;
+  border: 1px solid black;
+  border-radius: 5%;
+}
+
+.signUpFormInfo{
+  height: 80vh;
+  margin: 0px 1em 3em 1em;
+  border: 1px solid black;
+  border-radius: 5%;
+}
+
+.signUpMargin{
+  padding-top: 3em;
+}
+
+.signUpButton{
+  border: 2px solid black;
+  padding: 10px;
+  width: 95%;
+  border-radius: 25px;
+}
+
+.signUpForm form{
+  margin-left: 5%;
+}
+
+.signUpFormInfo form{
+  margin-left: 5%;
+}
+
+.whiteBackground{
+  background: white
+}
+
+.background{
+  background-image: url('https://i.imgur.com/FWi52No.jpg');
+  background-size: cover; 
+  background-position: fixed;
+  background-repeat: no-repeat;
+}
+
+.logoContainer{
+  padding-top: 10px
+}
+
+.logo{
+  display:block;
+  margin: 0px auto 0px auto;
+  padding: .5em;
+  border-radius: 50px;
+  border: 1px solid black;
+  background-color: white;
+}
+
+.signUpForm p{
+  margin: 2px 0px;
+}
+.signUpFormInfo p{
+  margin: 2px 0px;
+}
+
+.signUpForm input{
+  width: 95%;
+  font-size: 2em;
+  border: 2px solid rgba(0, 0, 0, 0.692);
+  border-radius: 15px;
+  margin: 2px 0px;
+}
+
+.signUpFormInfo input{
+  width: 95%;
+  font-size: 2em;
+  border: 2px solid rgba(0, 0, 0, 0.692);
+  border-radius: 15px;
+  margin: 2px 0px;
 }
 
 /* .signUpRow img{
@@ -143,33 +251,43 @@ code {
   display: none;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 5afebdcaf63a50df6bf802e91be31fcaab37af36
+.interestTitle{
+  border: 2px solid white;
+
+}
 
 .signUp{
   position: relative;
 }
 
+.signUpLink{
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+}
+.signUpLink::after{
+  color: white;
+}
+
 .finish{
+  font-size: 2em;
   position: absolute;
-  top: 1.5em;
-  right: 1em;
+  top: 10px;
+  right: 0em;
   text-decoration: none;
   text-transform: uppercase;
+  color: black;
+  border: 2px solid white;
+  background: white;
 }
+
 
 .fixed{
   position: fixed;
   top: 0;
   width: 100%
 }
-<<<<<<< HEAD
-=======
-=======
 
->>>>>>> 5afebdcaf63a50df6bf802e91be31fcaab37af36
 .reg-event-item{
   display: flex;
   align-items: center;
@@ -209,8 +327,3 @@ code {
   justify-content: space-between;
   width: 20%;
 }
-<<<<<<< HEAD
->>>>>>> 6fd027f742ca9018f0835926f93f8a4b932752ea
-=======
-
->>>>>>> 5afebdcaf63a50df6bf802e91be31fcaab37af36
