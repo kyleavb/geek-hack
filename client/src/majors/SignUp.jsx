@@ -1,21 +1,20 @@
 import React, { Component } from 'react';
-import Add from '../Add'
-
+import category_data from '../data/Categories.js'
+import Interests from '../minors/Interests'
+import { Link } from "react-router-dom";
 class SignUp extends Component {
     state = { 
         displayInfo: true,
-        firstName: '',
-        lastName: '',
+        name: '',
         userName: '',
         location: '',
         email: '',
-        gender: '',
-        password: ''
+        password: '',
+        categories: category_data.data
     }
     displayInfoToggle = () => {
         this.setState({
             displayInfo: false,
-            
         })
     }
     handleChange = (e) => {
@@ -24,18 +23,18 @@ class SignUp extends Component {
         })
     }
     render() { 
+        var categories = this.state.categories.map(category => (
+            <Interests category={category} />
+            ))
         var content;
         if(this.state.displayInfo){
             var content = (
-                <div>
+                <div className=''>
+                    <h1 className='App'>Basic Info</h1>
                     <form>
-                        First Name:
+                        My Name Is:
                         <br />
-                        <input type='text' name='firstName' onChange={this.handleChange} value={this.state.firstName} />
-                        <br />
-                        Last Name: 
-                        <br />
-                        <input type='text' name='lastName' onChange={this.handleChange} value={this.state.lastName} />
+                        <input type='text' name='name' onChange={this.handleChange} value={this.state.name} />
                         <br />
                         Username:
                         <br /> 
@@ -49,10 +48,6 @@ class SignUp extends Component {
                         <br />
                         <input type='text' name='email' onChange={this.handleChange} value={this.state.email} />
                         <br />
-                        Gender: 
-                        <br />
-                        <input type='text' name="gender" onChange={this.handleChange} value={this.state.gender} />
-                        <br />
                         Password:
                         <br /> 
                         <input type='password' name='password' onChange={this.handleChange} value={this.state.password} />
@@ -63,33 +58,15 @@ class SignUp extends Component {
             )
         } else {
             var content = (
-                <div>
-                <h1 className='App'>Choose your Favorites!</h1>
-                <div className='signUpContainer'>
-                    <div className='signUpRow'>
-                        <img src='http://media.wizards.com/2018/dnd/images/XL2018_DnD.png' />
-                        <div>
-                        <h1>Table Top Games</h1>
-                        <h3>Games like D&D, Warhammer, Pathfinder, etc...</h3>
-                        <Add />
-                        </div>
-                    </div> 
-                    <div className='signUpRow'>
-                        <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Star_Wars_Logo.svg/1200px-Star_Wars_Logo.svg.png' />
-                        <h1>Star Wars</h1>
-                        <Add />
-                    </div> 
-                    <div className='signUpRow'>
-                        <Add />
-                    </div> 
-                    <div className='signUpRow'>
-                        <Add />
-                    </div> 
-                    <div className='signUpRow'>
-                        <h1>Dungeons and Dragons</h1>
-                        <Add />
-                    </div> 
-                </div>
+                <div className='signUp'>
+                    <nav>
+                    <Link className='finish' to='/9101'>Finish </Link>
+                    </nav>
+                    <h2 className='signUpTitle'>Tell us what you are interested in Space Cowboy.</h2>
+                    <p className='signUpSubTitle'>This will help us find the best events for you!</p>
+                    <div className='signUpContainer'>
+                        {categories}
+                    </div>
                 </div>
             )
         }
@@ -100,5 +77,5 @@ class SignUp extends Component {
         );
     }
 }
- 
+
 export default SignUp;

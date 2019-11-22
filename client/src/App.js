@@ -22,12 +22,17 @@ class App extends Component {
   }
 
   render() {
-    
+    var contentClass;
+    if(this.state.user){
+      contentClass = 'content'
+    } else{
+      contentClass=''
+    }
     return (
       <div className="app">
         <Header user={ this.state.user }/>
         <Router>
-          <div className="content">
+          <div className={contentClass}>
             <Switch>
               <Route exact path='/' render={ (props) => <Home {...props} login={this.login} /> } />
               <Route exact path='/signup' component={SignUp} />

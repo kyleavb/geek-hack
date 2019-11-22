@@ -25,6 +25,34 @@ code {
     monospace;
 }
 
+.signUpContainer  {
+  width: 100%;
+  height:100vh;
+  overflow: scroll;
+}
+
+.signUpRow img{
+  height: 150px;
+  width:150px;
+}
+
+.signUpRow h1{
+  margin: 50px auto;
+  margin-left: 10px
+}
+
+.signUpTitle{
+  text-align: justify;
+  margin: 0px 5%;
+  padding-top: 3em;
+}
+
+.signUpSubTitle{
+  text-align: justify;
+  margin: 0px 5%;
+}
+
+
 .center{
   text-align: center;
 }
@@ -68,32 +96,32 @@ code {
   height: 40vh;
 }
 
-.signUpContainer {
+/* .signUpContainer {
   width: 50%;
   height:100vh;
   overflow-y: scroll;
   margin: 0 auto;
-}
+} */
 
 .signUpRow {
-  height: 200px;
+  height: 150px;
   position: relative;
   border: 2px solid black;
   display: grid;
   grid-template-columns: 1fr 2fr;
-
+  margin: 5%;
 }
 
-.signUpRow img{
+/* .signUpRow img{
   height: 200px;
   width:225px
-}
+} */
 
 .signUpRowClick{
   position: absolute;
   bottom: 0;
   right: 5px;
-  font-size: 5em;
+  font-size: 3em;
 }
 .content{
   margin-top: 5em;
@@ -101,4 +129,23 @@ code {
 }
 .hide{
   display: none;
+}
+
+
+.signUp{
+  position: relative;
+}
+
+.finish{
+  position: absolute;
+  top: 1.5em;
+  right: 1em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.fixed{
+  position: fixed;
+  top: 0;
+  width: 100%
 }
