@@ -114,9 +114,14 @@ code {
   display: grid;
   grid-template-columns: 1fr 2fr;
 <<<<<<< HEAD
+<<<<<<< HEAD
   margin: 5%;
 =======
 >>>>>>> 6fd027f742ca9018f0835926f93f8a4b932752ea
+=======
+
+  margin: 5%;
+>>>>>>> 5afebdcaf63a50df6bf802e91be31fcaab37af36
 }
 
 /* .signUpRow img{
@@ -139,6 +144,9 @@ code {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5afebdcaf63a50df6bf802e91be31fcaab37af36
 
 .signUp{
   position: relative;
@@ -157,7 +165,11 @@ code {
   top: 0;
   width: 100%
 }
+<<<<<<< HEAD
 =======
+=======
+
+>>>>>>> 5afebdcaf63a50df6bf802e91be31fcaab37af36
 .reg-event-item{
   display: flex;
   align-items: center;
@@ -197,4 +209,8 @@ code {
   justify-content: space-between;
   width: 20%;
 }
+<<<<<<< HEAD
 >>>>>>> 6fd027f742ca9018f0835926f93f8a4b932752ea
+=======
+
+>>>>>>> 5afebdcaf63a50df6bf802e91be31fcaab37af36
