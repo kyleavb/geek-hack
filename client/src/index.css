@@ -76,6 +76,7 @@ code {
 .app{
   height: 100vh;
 }
+
 .header, .footer{
   display: flex;
   z-index: 100;
@@ -88,12 +89,14 @@ code {
 }
 .header{
   top: 0px;
+  width: calc(100% - 2em);
+  padding: 0 1em;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 .footer{
-  background: lightgray;
+  background: #FFA500;
   bottom: 0px;
   justify-content: space-around;
   align-items: center;
@@ -101,7 +104,7 @@ code {
 
 .useBar{
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-end;
   width: 66%;
 }
 
@@ -303,7 +306,7 @@ code {
 }
 
 .event-detail{
-
+  margin: 0 1em;
 }
 
 .event-map{
@@ -327,3 +330,31 @@ code {
   justify-content: space-between;
   width: 20%;
 }
+
+
+.specifics{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.specific-details{
+  margin: 0 3em;
+}
+.specific-details div{
+  /* margin: 3em 0; */
+  width: 65%;
+}
+.weirdIcons{
+  display: flex;
+  align-items: center;
+  min-width: 70vw;
+  overflow: scroll;
+}
+.attendBar{
+  display: flex;
+  align-items: center;
+  padding-bottom: 1em;
+  width: 100%;
+}
+
