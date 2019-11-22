@@ -15,7 +15,7 @@ class UserIcons extends Component {
 
         return(
             <div className="attendBar">
-                <div className="weirdIcons">
+                <div id="stuff"className="weirdIcons">
                     {mapIcons}
                 </div>
                 <img src="https://img.icons8.com/android/24/000000/chevron-right.png"></img>
