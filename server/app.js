@@ -39,11 +39,6 @@ app.post( '/feed', ( req, res ) => {
     res.send( events );
 })
 
-app.get('/data', ( req, res ) => {
-    console.log('client request');
-    res.sendStatus(200);
-});
-
 app.post( '/event', ( req, res ) => {
     let user = req.body.login;
     let eventId = req.body.event;
@@ -72,11 +67,12 @@ app.all( '/*', routes );
 // common 404
 app.use( (req, res) => res.status( 404 ).send('Shit Broke, Not Found') );
 
+
 const listen = ( log ) => {
     return app.listen( config.PORT, () => {
         console.log( log );
     });
-  }
+}
 
 module.exports.init = () => {
     return listen( `Server listening on port ${ config.PORT }.` );
