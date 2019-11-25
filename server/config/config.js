@@ -1,3 +1,6 @@
+// Helper file for Sequlize - only run on initial setup / depolyment
+require('dotenv').config();
+
 let config = require('./index');
 
 module.exports = {
