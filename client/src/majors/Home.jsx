@@ -1,24 +1,14 @@
 import React, { Component } from 'react';
-import ls from 'local-storage';
 import axios from 'axios';
-import Options from '../minors/LandingOptions';
+import Intro from '../minors/Intro';
+import Login from '../minors/Login';
 
 class Home extends Component {
-    state = { 
+    state = {
         login: '',
         pass: '',
+        option : 'intro',
         fail: false
-    }
-
-    componentDidMount(){
-        if(ls.get( 'user' )){
-            ls.remove('user');
-            this.setState( {fail: false});
-        }
-    }
-
-    handleChange = (e) => {
-        this.setState( {[e.target.name]: e.target.value })
     }
 
     handleSubmit= (e) => {
@@ -28,18 +18,35 @@ class Home extends Component {
             pass: this.state.pass   
         }).then( res => {
             if( res.data ){
-                this.props.login(res.data)
-                this.props.history.push(`/${res.data}`)
+                console.log(res.data)
+                // this.props.login(res.data)
+                // this.props.history.push(`/${res.data}`)
             }else{
-                this.setState( {fail: true} )
+                this.setState( {fail: true} );
                 setTimeout(() => {
-                    this.setState( {fail: false} )
-                }, 2000)
+                    this.setState( {fail: false} );
+                }, 2000);
             }
         })
     }
 
+    handleChange = (e) => {
+        this.setState( {[e.target.name]: e.target.value })
+    }
+
+   handleOption = (e) => {
+       let dest = e.target.getAttribute('loc') || null;
+       if( dest === 'login' ){
+           this.setState( {option: e.target.getAttribute('loc')} )
+       }else if( dest === 'signup' ){
+           this.props.history.push('/signup')
+       }else{
+           this.setState( {option: 'intro'});
+       }
+   }
+
     render() {
+        let displayOption = this.state.option === 'intro' ? <Intro handle={this.handleOption} />: <Login {...this.props} submit={this.handleSubmit} login={this.state.login} pass={this.state.pass} change={this.handleChange} option={this.handleOption} fail={this.state.fail}/>
         return ( 
             <div className="landing-page">
                 <div className='logoContainer'>
@@ -81,15 +88,11 @@ class Home extends Component {
                 <p>
                     Weataher you're into technology, literature, or popular culture, meet with other impassioned individuals to geek out!
                 </p>
-                <div className="button">
-                    <h3>Login</h3>
-                </div>
-                <div className="button">
-                    <h3>Signup</h3>
-                </div>
+                {displayOption}
             </div>
          );
     }
 }
  
 export default Home;
+

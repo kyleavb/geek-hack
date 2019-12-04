@@ -22,24 +22,16 @@ class App extends Component {
     } 
   }
 
+  renderHeadFoot = () => {
+    
+  }
+
   render() {
-    var contentClass;
-    if(this.state.user){
-      contentClass = 'content'
-    } else{
-      contentClass=''
-    }
-    var background;
-    if(this.state.user){
-      background = 'app'
-    }else{
-      background = 'app background'
-    }
     return (
-      <div className={background}>
+      <div className="app background">
         <Header user={ this.state.user }/>
         <Router>
-          <div className={contentClass}>
+          <div className="content">
             <Switch>
               <Route exact path='/' render={ (props) => <Home {...props} login={this.login} /> } />
               <Route exact path='/signup' render={ (props) => <SignUp {...props} login={this.login} /> } />

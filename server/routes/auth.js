@@ -3,7 +3,7 @@ const router = require('express').Router();
 const users = require('../data/users');
 
 router.post('/', ( req, res ) => {
-    
+    console.log( 'Login request recieved' )
     let login = req.body.login;
     let pass = req.body.pass;
     let sendback = null;
@@ -13,9 +13,8 @@ router.post('/', ( req, res ) => {
             sendback = item.guid
         }
     }
-    // console.log( sendback );
+    console.log( `sending: ${sendback}` );
     res.send( sendback );
-    // res.sendStatus(200);
 })
 
 module.exports = router;
