@@ -1,35 +1,70 @@
 import React, { Component } from 'react';
-// import category_data from '../data/Categories.js'
-// import Interests from '../minors/Interests'
+import BasicInfo from '../minors/Signup-Fields/basicInfo';
+import util from '../helpers/validations';
 import axios from 'axios';
-import { Link } from "react-router-dom";
 
 class SignUp extends Component {
     state = { 
-        progress: 0,
+        stage: 0,
+        first : null,
+        last: null,
+        email: null,
+        password: null,
+        tagLine: null,
+        topInterest: [],
+        specificInterest: [],
+        formError: false
     }
     
     handleChange = ( e ) => {
         this.setState({
             [e.target.name]: e.target.value
-        })
+        });
     }
 
-    moveProgress = ( dir ) => {
-        console.log('check progress and change content')
+    validateInfo = () => {
+        if( this.state.first && this.state.last && util.validateEmail(this.state.email) && util.validatePassword( this.state.password ) ){
+            // progresses to next stage of onboarding --- can be removed for testing
+                // this.setState({ stage: this.state.stage += 1})
+
+            // for testing, when valid will create a user
+            this.props.history.push('/')
+        }else{
+            this.setState({ formError: true });
+            setTimeout( () => {
+                this.setState({ formError: false });
+            }, 1500)
+        }
+
     }
 
-    goBack = (e) => { 
-        this.props.history.goBack()
+    goBack = (e) => {
+        console.log('goback')
+        if( this.state.stage === 0){
+            this.props.history.goBack()
+        }
+        if( this.state.stage > 0){
+            this.setState({ stage: this.state.stage -= 1 });
+        }
     }
+
+    progress = () => {
+        switch( this.state.stage) {
+            case 0:
+                return <BasicInfo {...this.state} handleChange={ this.handleChange } validateInput={ this.validateInfo } exit={ this.goBack } />
+                break;
+            case 1:
+                return <h1>Hi</h1>
+                break;
+        }
+    }
+
     render() { 
-        // var categories = this.state.categories.map(category => (
-        //     <Interests category={category} />
-        //     ))
-        
+        let showSignUpForm = this.progress();
+
         return ( 
             <div className="signup">
-                <div className="button" onClick={ this.goBack }> Go Back</div>
+                {showSignUpForm}
             </div>
         );
     }

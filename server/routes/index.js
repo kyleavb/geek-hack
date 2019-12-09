@@ -4,6 +4,7 @@ const router = require( 'express' ).Router();
 const auth = require( './auth' );
 const feed = require( './feed' );
 const health = require('./health');
+const register = require('./register');
 
 router.use( '/auth', auth );
 router.use( '/feed', feed );

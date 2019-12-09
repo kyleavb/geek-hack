@@ -2,6 +2,7 @@ import React from 'react';
 
 const Login = ( props ) => {
     let disp = props.fail ? '' : 'hide';
+    
     return(
         <div className="intro">
             <div className={`fail ${disp}`}>

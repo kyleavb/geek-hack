@@ -99,7 +99,7 @@ label{
 
 .app{
   height: 100vh;
-  padding: 0 15%;
+  padding: 0 10%;
 }
 
 .header, .footer{
@@ -410,3 +410,66 @@ label{
   width: 100%;
 }
 
+.signup{
+  padding-top: 15%;
+}
+
+.userInfo{
+  text-align: center;
+  border-radius: 20px;
+  padding: 1em 5px;
+  background: white;
+  color: black;
+}
+
+.inputSection{
+  text-align: left;
+  padding: 2% 0;
+}
+
+.userInfo h5{
+  margin: 5px 0;
+}
+.userInfo input{
+  box-shadow: none !important;
+  border: rgb(200, 199, 199) solid 2px;
+  padding-left: 10px;
+  border-radius: 6px;
+  height: 30px;
+  width: 97%
+}
+
+.userInfo input::placeholder{
+  color: rgba(149, 145, 145, 0.5);
+}
+.formError{
+  padding: 0;
+  margin: 0;
+}
+.userInfo .button{
+  border-radius: 12px;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  width: 66vw;
+  height: 3em;
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  background: #FFA500;
+  color: white;
+  margin: .5em 0;
+}
+.userInfo .options{
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+.terms{
+  margin: 10px 0;
+}
+.terms a{
+  color: #FFA500;
+}

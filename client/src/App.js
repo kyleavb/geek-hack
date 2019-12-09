@@ -12,17 +12,6 @@ import './App.css';
 
 class App extends Component {
   state = {
-    user: ls.get( 'user' ) || null
-  }
-
-  login = (guid) => {
-    if( guid ){
-      this.setState({user: guid})
-      ls.set('user', guid);
-    } 
-  }
-
-  renderHeadFoot = () => {
     
   }
 
@@ -34,7 +23,7 @@ class App extends Component {
           <div className="content">
             <Switch>
               <Route exact path='/' render={ (props) => <Home {...props} login={this.login} /> } />
-              <Route exact path='/signup' render={ (props) => <SignUp {...props} login={this.login} /> } />
+              <Route exact path='/signup' render={ (props) => <SignUp {...props} submit={this.login} /> } />
               <Route exact path='/:guid' render={ (props) => <Feed {...props} user={this.state.user} /> }/>
               <Route exact path='/:guid/events' render={ (props) => <EventList {...props} user={this.state.user} /> }/>
               <Route exact path='/:guid/event/:eguid' render={ (props) => <Event {...props} user={this.state.user} /> }/>
